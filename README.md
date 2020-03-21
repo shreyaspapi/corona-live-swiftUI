@@ -1,6 +1,6 @@
 # Corona Virus Live Updates
 
-![Twitter Follow](https://img.shields.io/twitter/follow/spapinwar?style=social)](https://twitter.com/spapinwar)
+[![Twitter Follow](https://img.shields.io/twitter/follow/spapinwar?style=social)](https://twitter.com/spapinwar)
 
 ## TODO 
  - Randomise background gradiant
