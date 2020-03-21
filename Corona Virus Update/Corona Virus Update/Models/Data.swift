@@ -13,9 +13,9 @@ import SwiftUI
 struct Data: Codable, Hashable, Identifiable {
     let id: Int
     let loc: String
-    let confirmedCasesIndian: Int
-    let confirmedCasesForeign: Int
-    let discharged: Int
-    let deaths: Int
-    let total: Int
+    let confirmedCasesIndian: String
+    let confirmedCasesForeign: String
+    let discharged: String
+    let deaths: String
+    let total: String
 }

@@ -37,7 +37,7 @@ struct ContentView: View{
                 Divider()
                 
                 List(model.datas) { item in
-                    if item.cases != "0" {
+                    if item.total != "0" {
                         VStack(alignment: .leading) {
                             HStack {
                                 Text(item.loc)
@@ -55,7 +55,7 @@ struct ContentView: View{
                                     .frame(width: 17.0, height: 13.0)
                             }
                             
-                            Text(String(item.total) + " Positive")
+                            Text(item.total + " Positive")
                                 .font(.system(size: 35))
                                 .foregroundColor(.white)
                                 .fontWeight(.bold)
