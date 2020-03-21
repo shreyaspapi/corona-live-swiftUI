@@ -33,9 +33,6 @@ struct ContentView: View{
                     .foregroundColor(.white)
                     .opacity(0.4)
                 
-                
-                Divider()
-                
                 List(model.datas) { item in
                     if item.total != "0" {
                         VStack(alignment: .leading) {
@@ -49,10 +46,10 @@ struct ContentView: View{
                                 
                                 Spacer()
                                 
-                                Image(systemName: "eye.fill").resizable()
-                                    .foregroundColor(.white)
-                                    .opacity(0.4)
-                                    .frame(width: 17.0, height: 13.0)
+                                //                                Image(systemName: "eye.fill").resizable()
+                                //                                    .foregroundColor(.white)
+                                //                                    .opacity(0.4)
+                                //                                    .frame(width: 17.0, height: 13.0)
                             }
                             
                             Text(item.total + " Positive")
@@ -62,21 +59,20 @@ struct ContentView: View{
                                 .opacity(0.9)
                             
                             Text(item.deaths + " Died")
-                            .font(.system(size: 35))
-                            .foregroundColor(.white)
-                            .fontWeight(.bold)
-                            .opacity(0.9)
+                                .font(.system(size: 35))
+                                .foregroundColor(.white)
+                                .fontWeight(.bold)
+                                .opacity(0.9)
                             Text("")
-                            .padding(3)
+                                .padding(3)
                         }
                     }
                 }
-               
+                
                 
                 
                 Spacer()
             }
-        .listStyle(GroupedListStyle())
         }
     }
 }
