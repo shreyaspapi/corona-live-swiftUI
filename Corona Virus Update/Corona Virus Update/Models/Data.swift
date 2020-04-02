@@ -11,11 +11,7 @@ import SwiftUI
 
 
 struct Data: Codable, Hashable, Identifiable {
+    let confirmed, active, deaths: String
     let id: Int
-    let loc: String
-    let confirmedCasesIndian: String
-    let confirmedCasesForeign: String
-    let discharged: String
-    let deaths: String
-    let total: String
+    let lastupdatedtime, recovered, state: String
 }

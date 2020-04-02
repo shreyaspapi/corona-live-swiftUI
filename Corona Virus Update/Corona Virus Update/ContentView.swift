@@ -12,6 +12,12 @@ struct ContentView: View{
     
     @ObservedObject var model = DataListViewModel()
     
+    let colours = [
+        [Color(hex: "#9BA238"), Color(hex: "#D9DD96")],
+        [Color(hex: "#2c3a4d"), Color(hex: "#688bbb")],
+        [Color(hex: "#266F35"), Color(hex: "#62CD78")]
+    ]
+    
     init() {
         UITableView.appearance().backgroundColor = .clear
         UITableViewCell.appearance().backgroundColor = .clear
@@ -19,7 +25,7 @@ struct ContentView: View{
     var body: some View {
         ZStack {
             LinearGradient(
-                gradient: Gradient(colors: [Color(hex: "#2c3a4d"), Color(hex: "#688bbb")]),
+                gradient: Gradient(colors: colours.randomElement() ?? [Color(hex: "#2c3a4d"), Color(hex: "#688bbb")]),
                 startPoint: .top,
                 endPoint: .bottom
             )
@@ -34,38 +40,8 @@ struct ContentView: View{
                     .opacity(0.4)
                 
                 List(model.datas) { item in
-                    if item.total != "0" {
-                        VStack(alignment: .leading) {
-                            HStack {
-                                Text(item.loc)
-                                    .fontWeight(.bold)
-                                    .foregroundColor(.white)
-                                    .font(.system(size: 20))
-                                    .opacity(0.4)
-                                
-                                
-                                Spacer()
-                                
-                                //                                Image(systemName: "eye.fill").resizable()
-                                //                                    .foregroundColor(.white)
-                                //                                    .opacity(0.4)
-                                //                                    .frame(width: 17.0, height: 13.0)
-                            }
-                            
-                            Text(item.total + " Positive")
-                                .font(.system(size: 35))
-                                .foregroundColor(.white)
-                                .fontWeight(.bold)
-                                .opacity(0.9)
-                            
-                            Text(item.deaths + " Died")
-                                .font(.system(size: 35))
-                                .foregroundColor(.white)
-                                .fontWeight(.bold)
-                                .opacity(0.9)
-                            Text("")
-                                .padding(3)
-                        }
+                    if item.confirmed != "0" {
+                        CoronaRow(confirmed: item.confirmed, active: item.active, deaths: item.deaths, lastupdatedtime: item.lastupdatedtime, recovered: item.recovered, state: item.state)
                     }
                 }
                 
