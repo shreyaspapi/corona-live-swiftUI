@@ -4,7 +4,7 @@
 
 ## Website
 
-![https://shreyasp.me/tca.html](https://shreyasp.me/tca.html)
+[https://shreyasp.me/tca.html](https://shreyasp.me/tca.html)
 
 ## TODO 
  - Randomise background gradiant
