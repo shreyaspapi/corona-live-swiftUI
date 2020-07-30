@@ -11,7 +11,7 @@
  - Add app icon
  - Restructing of code
  - Adding search bar for searhing states
- - Add more countries (Getting data from WHO or each country Govt. API)
+ - Add more countries (Getting data from WHO or each country Govt. API)fg
 
 ## Screenshot
 
